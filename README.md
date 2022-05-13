@@ -44,7 +44,7 @@ A pasta da aplicação definida na Dockerfile é /app
 
 ### Módulos
 
-- config.py: atribuição manual de clusters de acordo com o output da NMF. Ao fim da inferência, são exibidos no terminal termos que não possuem atribuição. Adicioná-los ao arquivo, se adequados.
+- config.py: atribuição manual de clusters de acordo com o output do k-means. Ao fim da inferência, são exibidos no terminal termos que não possuem atribuição. Adicioná-los ao arquivo, se adequados.
 - cleaner.py: limpeza e tratamento de dados utilizada em todas as etapas.
 - GensimEstimator.py: SKLearn wrapper para utilizar Word2Vec em pipelines.
 
