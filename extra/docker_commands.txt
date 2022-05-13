@@ -1,0 +1,35 @@
+# ----------------------------------------------------------
+#TREINO
+
+# liberar permissões do docker, caso algum comando não execute
+sudo chmod 666 /var/run/docker.sock
+
+# logar no aws pelo docker (necessárias chaves de acesso AWS atualizadas no ambiente)
+echo $(aws ecr get-login-password)|docker login --password-stdin --username AWS 2960258890508.dkr.ecr.us-east-1.amazonaws.com
+
+# rodar localmente com chaves de acesso atualizadas (alterar no comando)
+docker run \
+-e AWS_ACCESS_KEY_ID=ASIAUJ3EWLKXZ6HPR \
+-e AWS_SECRET_ACCESS_KEY=yxU2lWbeEWNjqz4qBNf2pQIbZNBdfKRnNOaJDV \
+-e AWS_SESSION_TOKEN=IQoJb3JpZ2luX2VjEJr//////////wEaCXVzLWVhc3QtMSJHMEUCIQCVKCZrEol7eJKAeR9utc9fy9OAqFk4I7UPUuD8VxJBXwIgQZEO/Rvh6YWukvhIqkHB7DkIwxasa1mgFZRuWeSTzIMqrQMIwv//////////ARAFGgwyOTYwMjU5MTA1MDgiDBpntAFHXTj7ExxztiqBA+Ha26fL4KEPdkQXdVsmEk5xvJJUSOsYvbpvJHMlGdQ87Ljn1k6pFqcEZ7WYm3UnsisY+e/aQKLpFOFDuJ0wCQK0E2R598bP0LiRHKH83Z7TizYSqGZXFachFDq5Z1jDPqBJqM6EzafiH53mN8piK8L1ty6eWaQAZDZrMH6MB/bsndxaIIirP9xxVvTFLHIZTjqfgGiH/Qi4XTmFDSR//1NME5Pb4XTCcRUlOXmaSt/wldTSkdfTfwsouWLMJ4Vl29LmuBwdC5L+GRrx/jl4BCFLzH/xs5p9wX39Ivt/qBn5tIMWG9olGCgPFFSIdGoJ5sXVGYwli0ootfnRosKS9kG/dHdpM14ZLk8yr3TQUnRgy2vmpG+ocAc+lcUo/rpMpHYrOPGioMELiPxv2wlHyTWsC9Ys6R9ol7r540oe3KQE58Sndv8cephyB4K9gv/qDjZNtRBb97jiyifahR3YndYu99GgN+1ak5hYwJB1G2GbpoMrj5GM3/Gtqhl2kwxqTLjwY6pgG4TEbEVfpwG1V9tLuTust4o5eJao9GboKYw1fcKCaoZrAkJyQ8da854EiZG4gGZadnfD/SpUzbMrfgfyImAMRP0uXHxGLGHn/xLEGelXiDzrEwn3om9v50BB3O8Tq07QM0fFkc1u5seSwnYzUfCu/2y+ZFXr1V6Ncwpyz4b3bXdcOZEirZUfN/m9eGe0FclfwIKfC429n2wphDpZU2N8ICh6aCUs/x \
+cx_social_comments_loja_br_instagram training.py
+
+# ---------------------------------------------------------
+# OUTROS COMANDOS ÚTEIS
+
+# deletar todas as imagens criadas localmente
+docker rmi -f $(docker images -a -q)
+
+# criar repositório para receber a imagem
+aws ecr create-repository --repository-name cx_social_comments_loja_br_instagram
+
+# criar imagem com o conteúdo da pasta atual
+sudo chmod 666 /var/run/docker.sock
+echo $(aws ecr get-login-password)|docker login --password-stdin --username AWS 2960288808.dkr.ecr.us-east-1.amazonaws.com
+docker build --tag cx_social_comments_loja_br_instagram .
+
+# adicionar tag padrão do ECR
+docker tag cx_social_comments_loja_br_instagram:latest 296025910508.dkr.ecr.us-east-1.amazonaws.com/cx_social_comments_loja_br_instagram:latest
+
+# push na imagem para o repositório
+docker push 2960257770508.dkr.ecr.us-east-1.amazonaws.com/cx_social_comments_loja_br_instagram:latest

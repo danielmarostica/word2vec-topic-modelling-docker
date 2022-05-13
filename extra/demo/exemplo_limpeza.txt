@@ -1,0 +1,148 @@
+
+Iniciando limpeza de texto
+
+Originais
+0                                                                         NaN
+1                                                                          Oi
+2                                                                          Oi
+3                                                           @claudia verdade!
+4                                                 Renata Aragão verdade amiga
+5                 Dafiti Eu estou esperando há dias e nada da minha encomenda
+6                                                     @loja estou esperando
+7    Não imaginava, que mandava     o produto tão rápido kkkk *** \n obrigado
+8                                   Lindo esse vestido minha filha vai adorar
+9                                                                            
+
+Remover nulos
+0                                                                          Oi
+1                                                                          Oi
+2                                                           @claudia verdade!
+3                                                 Renata Aragão verdade amiga
+4                 Dafiti Eu estou esperando há dias e nada da minha encomenda
+5                                                     @loja estou esperando
+6    Não imaginava, que mandava     o produto tão rápido kkkk *** \n obrigado
+7                                   Lindo esse vestido minha filha vai adorar
+8                                                                            
+
+Remover duplicados
+0                                                                          Oi
+1                                                           @claudia verdade!
+2                                                 Renata Aragão verdade amiga
+3                 Dafiti Eu estou esperando há dias e nada da minha encomenda
+4                                                     @loja estou esperando
+5    Não imaginava, que mandava     o produto tão rápido kkkk *** \n obrigado
+6                                   Lindo esse vestido minha filha vai adorar
+7                                                                            
+
+Remover comentários que iniciam com @, mas que não são @loja
+0                                                                          Oi
+1                                                 Renata Aragão verdade amiga
+2                 Dafiti Eu estou esperando há dias e nada da minha encomenda
+3                                                     @loja estou esperando
+4    Não imaginava, que mandava     o produto tão rápido kkkk *** \n obrigado
+5                                   Lindo esse vestido minha filha vai adorar
+6                                                                            
+
+Remover comentários que iniciam com nomes (duas palavras capitalizadas) mas mantê-los se contém Dafiti
+0                                                                          Oi
+1                 Dafiti Eu estou esperando há dias e nada da minha encomenda
+2                                                     @loja estou esperando
+3    Não imaginava, que mandava     o produto tão rápido kkkk *** \n obrigado
+4                                   Lindo esse vestido minha filha vai adorar
+5                                                                            
+
+Transformar em caixa baixa
+0                                                                          oi
+1                 loja eu estou esperando há dias e nada da minha encomenda
+2                                                     @loja estou esperando
+3    não imaginava, que mandava     o produto tão rápido kkkk *** \n obrigado
+4                                   lindo esse vestido minha filha vai adorar
+5                                                                            
+
+Remover usernames
+0                                                                          oi
+1                 loja eu estou esperando há dias e nada da minha encomenda
+2                                                             estou esperando
+3    não imaginava, que mandava     o produto tão rápido kkkk *** \n obrigado
+4                                   lindo esse vestido minha filha vai adorar
+5                                                                            
+
+Remover "Dafiti" do início de frases
+0                                                                          oi
+1                        eu estou esperando há dias e nada da minha encomenda
+2                                                             estou esperando
+3    não imaginava, que mandava     o produto tão rápido kkkk *** \n obrigado
+4                                   lindo esse vestido minha filha vai adorar
+5                                                                            
+
+Dividir comentários em frases
+0                                                           oi
+1         eu estou esperando há dias e nada da minha encomenda
+2                                              estou esperando
+3                                               não imaginava.
+4    que mandava     o produto tão rápido kkkk *** \n obrigado
+5                    lindo esse vestido minha filha vai adorar
+6                                                          nan
+
+Remover stopwords
+0                                              oi
+1                   esperando dias nada encomenda
+2                                       esperando
+3                                  não imaginava 
+4    que mandava produto tão rápido kkkk obrigado
+5                  lindo vestido filha vai adorar
+6                                             nan
+
+Remover excesso de espaços em branco, repetições de caracteres e resquícios HTML
+0                                          oi
+1               esperando dias nada encomenda
+2                                   esperando
+3                              não imaginava 
+4    que mandava produto tão rápido  obrigado
+5              lindo vestido filha vai adorar
+6                                         nan
+
+Remover caracteres que não são letras ou espaço em branco
+0                                          oi
+1               esperando dias nada encomenda
+2                                   esperando
+3                              não imaginava 
+4    que mandava produto tão rápido  obrigado
+5              lindo vestido filha vai adorar
+6                                         nan
+
+Remover comentários muito grandes ou pequenos
+0               esperando dias nada encomenda
+1    que mandava produto tão rápido  obrigado
+2              lindo vestido filha vai adorar
+
+Lematização
+0                esperar dia nada encomendar
+1    que mandar produto tão rápido   obrigar
+2             lindar vestir filho vai adorar
+
+Substituição de letras com acento
+0                esperar dia nada encomendar
+1    que mandar produto tao rapido   obrigar
+2             lindar vestir filho vai adorar
+
+Realizando substituições de sinônimos
+0             esperar tempo nada encomendar
+1    que mandar pedido tao rapido   obrigar
+2               lindar vestir filho vai amo
+
+Remover frases que não contenham as palavras obrigatórias
+0             esperar tempo nada encomendar
+1    que mandar pedido tao rapido   obrigar
+
+Remover termos inúteis
+0       esperar tempo nada encomendar
+1    que mandar pedido tao rapido    
+
+Stemização
+0    esper temp nad encomend
+1       que mand ped tao rap
+
+Remover excesso de espaço em branco, vazios e nulos
+0    esper temp nad encomend
+1       que mand ped tao rap

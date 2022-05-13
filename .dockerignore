@@ -1,0 +1,8 @@
+**/__pycache__
+*.pyc
+.directory
+.gitignore
+extra/**
+**/*.ipynb
+**/*.csv
+temp/**
