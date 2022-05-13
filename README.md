@@ -51,7 +51,6 @@ A pasta da aplicação definida na Dockerfile é /app
 |![Fluxo de limpeza](extra/data_cleaning.jpg)|
 |:--:| 
 |*Fluxo de limpeza de dados*| 
-[//]: # "https://miro.com/welcomeonboard/anF6WGM2ZEFjaFJIeGQxTFI1WXoyY3BnZFdPQU9MRGFNTXp3elM5VG9sS2RWYUZKRDNYSjB3WWx2MFB2V1hJZHwzNDU4NzY0NTIzNzk5NjIzMDE5?share_link_id=826976411143"
 
 ### Extras
 
