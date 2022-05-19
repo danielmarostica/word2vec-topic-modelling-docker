@@ -4,8 +4,6 @@ Criado e mantido por Daniel Marostica
 
 ## Arquivos
 
-URLs da AWS requerem acesso à conta 2968810508.
-
 - [Repositório](https://us-east-1.console.aws.amazon.com/codesuite/codecommit/repositories/cx_social_comments_Loja_br_instagram/browse?region=us-east-1) do código fonte
 - [Hanger Job](http://142.98.11.037:8080/hanger/job/view/3210) com toda a ETL
 - [Dados para inferência](https://s3.console.aws.amazon.com/s3/object/sagemaker-us-east-1-273573475387?region=us-east-1&prefix=social-media-cx-monitor/Loja_br/comentarios_instagram/data_for_inference.csv) atualizados pela ETL
